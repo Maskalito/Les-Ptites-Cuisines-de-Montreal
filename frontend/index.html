@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Les P'tites Cuisines de Montréal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="logo-icon">🍳</span>
+        <span>Les P'tites Cuisines</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#comment">Comment ça marche</a></li>
+        <li><a href="#valeur">Pourquoi nous</a></li>
+        <li><a href="#temoignages">Témoignages</a></li>
+        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="account.html">Mon compte</a></li>
+        <li><a href="#rejoindre" class="btn btn--nav">Rejoindre</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero__bg-shapes">
+      <div class="shape shape--1"></div>
+      <div class="shape shape--2"></div>
+      <div class="shape shape--3"></div>
+    </div>
+    <div class="hero__content">
+      <span class="badge">🌱 Service écoresponsable &bull; Montréal</span>
+      <h1 class="hero__title">
+        Cuisiner ensemble,<br />
+        <em>manger mieux.</em>
+      </h1>
+      <p class="hero__subtitle">
+        Rejoins une cuisine collective mobile près de ton campus. Économise jusqu'à <strong>50 %</strong> sur ton alimentation, rencontre de nouvelles personnes et mange sainement — sans te ruiner ni passer des heures au supermarché.
+      </p>
+      <div class="hero__actions">
+        <a href="#rejoindre" class="btn btn--primary">Je veux rejoindre ✦</a>
+        <a href="#comment" class="btn btn--ghost">Voir comment ça marche</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__number">50%</span>
+          <span class="stat__label">d'économies sur la bouffe</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__number">0</span>
+          <span class="stat__label">heure de planification</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__number">100%</span>
+          <span class="stat__label">fait en groupe &amp; local</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__image">
+      <div class="hero__img-card">
+        <div class="img-placeholder">
+          <span class="img-emoji">👩‍🍳</span>
+          <p>Session de cuisine collective</p>
+        </div>
+        <div class="img-tag img-tag--1">🥦 Ingrédients locaux</div>
+        <div class="img-tag img-tag--2">❤️ Fait ensemble</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="problems" id="probleme">
+    <div class="container">
+      <p class="section__eyebrow">Le problème qu'on résout</p>
+      <h2 class="section__title">La vie étudiante, c'est pas toujours facile</h2>
+      <div class="problems__grid">
+        <div class="problem-card">
+          <div class="problem-card__icon">💸</div>
+          <h3>Manger sain coûte trop cher</h3>
+          <p>Les épiceries s'accumulent, le resto c'est ruineux, et les repas préparés sont souvent mauvais pour la santé.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-card__icon">🕐</div>
+          <h3>Pas le temps de cuisiner</h3>
+          <p>Entre les cours, les devoirs et le boulot, faire ses courses et cuisiner devient un luxe impossible.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-card__icon">😔</div>
+          <h3>Manger seul, tout seul</h3>
+          <p>L'isolement étudiant est réel. Manger devient une corvée solitaire plutôt qu'un moment de plaisir partagé.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-card__icon">🤷</div>
+          <h3>Ne sait pas vraiment cuisiner</h3>
+          <p>Personne ne t'a appris, et commencer seul·e dans un petit appartement, c'est intimidant.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="comment">
+    <div class="container">
+      <p class="section__eyebrow">La solution</p>
+      <h2 class="section__title">Comment ça marche ?</h2>
+      <div class="how__steps">
+        <div class="step">
+          <div class="step__number">1</div>
+          <div class="step__content">
+            <h3>Tu t'abonnes</h3>
+            <p>Choisis une formule mensuelle ou hebdomadaire selon ton rythme. On s'occupe du reste.</p>
+          </div>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__number">2</div>
+          <div class="step__content">
+            <h3>On cuisine ensemble</h3>
+            <p>Rejoins une session dans un local près de ton campus. Nos animateurs guident le groupe pour cuisiner des repas équilibrés et savoureux.</p>
+          </div>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__number">3</div>
+          <div class="step__content">
+            <h3>Tu repars avec tes repas</h3>
+            <p>Tu rempars avec tes repas pour toute la semaine dans des contenants réutilisables. C'est prêt, c'est bon, c'est fait maison.</p>
+          </div>
+        </div>
+      </div>
+      <div class="how__cycle">
+        <p class="how__cycle-label">Notre cycle de vie responsable</p>
+        <div class="cycle-steps">
+          <span class="cycle-step">🌾 Approvisionnement local</span>
+          <span class="cycle-arrow">→</span>
+          <span class="cycle-step">🍲 Production collective</span>
+          <span class="cycle-arrow">→</span>
+          <span class="cycle-step">📦 Distribution</span>
+          <span class="cycle-arrow">→</span>
+          <span class="cycle-step">🍽️ Utilisation</span>
+          <span class="cycle-arrow">→</span>
+          <span class="cycle-step">♻️ Compost &amp; recyclage</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="value" id="valeur">
+    <div class="container">
+      <p class="section__eyebrow">Pourquoi nous choisir</p>
+      <h2 class="section__title">Une combinaison unique d'économies,<br />de lien social et d'écoresponsabilité</h2>
+      <div class="value__grid">
+        <div class="value-card value-card--eco">
+          <div class="value-card__icon">💰</div>
+          <h3>Économique</h3>
+          <ul>
+            <li>Jusqu'à <strong>50 % d'économies</strong> par rapport aux courses individuelles</li>
+            <li>Achats groupés en gros pour réduire les coûts</li>
+            <li>Recettes économiques et savoureuses fournies</li>
+          </ul>
+        </div>
+        <div class="value-card value-card--social">
+          <div class="value-card__icon">🤝</div>
+          <h3>Social</h3>
+          <ul>
+            <li>Rencontres et liens sociaux lors de chaque session</li>
+            <li>Lutte contre l'isolement étudiant</li>
+            <li>Développement de compétences culinaires</li>
+            <li>Communauté solidaire et inclusive</li>
+          </ul>
+        </div>
+        <div class="value-card value-card--env">
+          <div class="value-card__icon">🌿</div>
+          <h3>Environnemental</h3>
+          <ul>
+            <li>Ingrédients en circuit court, locaux et régionaux</li>
+            <li>Achats groupés → moins de déplacements</li>
+            <li>Réduction du gaspillage alimentaire</li>
+            <li>Contenants réutilisables</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="temoignages">
+    <div class="container">
+      <p class="section__eyebrow">Ils nous font confiance</p>
+      <h2 class="section__title">Ce que disent nos membres</h2>
+
+      <div id="testimonials-grid" class="testimonials__grid">
+        <p class="testimonials__loading">Chargement des témoignages…</p>
+      </div>
+
+      <div class="testimonial-form-wrap">
+        <h3>Partage ton expérience</h3>
+        <form class="testimonial-form" id="testimonialForm" onsubmit="handleTestimonialSubmit(event)">
+          <div class="form__row">
+            <input type="text" name="author_name" placeholder="Ton prénom et initiale (ex: Julien T.)" required />
+            <input type="text" name="university" placeholder="Ton université / programme" />
+          </div>
+          <div class="testimonial-form__rating">
+            <span>Ta note :</span>
+            <div class="star-picker" id="starPicker">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+            <input type="hidden" name="rating" id="ratingInput" value="5" />
+          </div>
+          <textarea name="content" placeholder="Raconte ton expérience avec Les P'tites Cuisines…" rows="4" required></textarea>
+          <button type="submit" class="btn btn--ghost">Envoyer mon témoignage</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="tarifs">
+    <div class="container">
+      <p class="section__eyebrow">Nos formules</p>
+      <h2 class="section__title">Simple, transparent, abordable</h2>
+      <div class="pricing__grid">
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <h3>Hebdomadaire</h3>
+            <p class="pricing-card__desc">Parfait pour essayer</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="price">~15 $</span>
+            <span class="price-period">/ semaine</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>✓ Session de cuisine collective</li>
+            <li>✓ Repas pour 5-7 jours</li>
+            <li>✓ Recettes et guide inclus</li>
+            <li>✓ Contenants réutilisables fournis</li>
+          </ul>
+          <a href="#rejoindre" class="btn btn--ghost btn--full">Commencer</a>
+        </div>
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__badge">Le plus populaire</div>
+          <div class="pricing-card__header">
+            <h3>Mensuel</h3>
+            <p class="pricing-card__desc">Le meilleur rapport qualité-prix</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="price">~50 $</span>
+            <span class="price-period">/ mois</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>✓ 4 sessions par mois</li>
+            <li>✓ Repas pour toute la semaine</li>
+            <li>✓ Recettes et guides inclus</li>
+            <li>✓ Contenants réutilisables fournis</li>
+            <li>✓ Accès aux offres membres</li>
+            <li>✓ Programme de parrainage</li>
+          </ul>
+          <a href="#rejoindre" class="btn btn--primary btn--full">S'abonner maintenant</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <h3>Découverte</h3>
+            <p class="pricing-card__desc">Pour les nouveaux membres</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="price">Gratuit</span>
+            <span class="price-period">1ère session</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>✓ 1 session d'essai offerte</li>
+            <li>✓ Rencontre de la communauté</li>
+            <li>✓ Repas de la session inclus</li>
+            <li>✓ Sans engagement</li>
+          </ul>
+          <a href="#rejoindre" class="btn btn--ghost btn--full">Réserver ma place</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact">
+    <div class="container">
+      <p class="section__eyebrow">Notre impact</p>
+      <h2 class="section__title">Plus qu'une cuisine, une mission</h2>
+      <div class="impact__grid">
+        <div class="impact-item">
+          <span class="impact-item__icon">🏫</span>
+          <p>Partenariats avec universités et cégeps de Montréal</p>
+        </div>
+        <div class="impact-item">
+          <span class="impact-item__icon">🌾</span>
+          <p>Approvisionnement auprès de producteurs agricoles régionaux</p>
+        </div>
+        <div class="impact-item">
+          <span class="impact-item__icon">🤲</span>
+          <p>OBNL avec structure horizontale — les membres participent aux décisions</p>
+        </div>
+        <div class="impact-item">
+          <span class="impact-item__icon">♻️</span>
+          <p>Réinvestissement des profits dans les banques alimentaires</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="rejoindre">
+    <div class="container">
+      <div class="cta__box">
+        <div class="cta__content">
+          <h2>Prêt·e à rejoindre la communauté ?</h2>
+          <p>Laisse-nous tes coordonnées et on te contacte pour ta première session d'essai <strong>gratuite</strong>.</p>
+          <form class="cta__form" id="signupForm" onsubmit="handleSubmit(event)">
+            <div class="form__row">
+              <input type="text" name="first_name" placeholder="Ton prénom" required />
+              <input type="email" name="email" placeholder="Ton courriel étudiant" required />
+            </div>
+            <div class="form__row">
+              <select name="university">
+                <option value="" disabled selected>Ton université / cégep</option>
+                <option>Université de Montréal</option>
+                <option>UQAM</option>
+                <option>McGill</option>
+                <option>Concordia</option>
+                <option>Université Laval</option>
+                <option>Collège de Maisonneuve</option>
+                <option>Autre</option>
+              </select>
+              <select name="plan">
+                <option value="" disabled selected>Formule qui t'intéresse</option>
+                <option>Session découverte (gratuite)</option>
+                <option>Abonnement hebdomadaire</option>
+                <option>Abonnement mensuel</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn--primary btn--large">Réserver ma place gratuite ✦</button>
+          </form>
+          <p class="cta__note">Sans engagement. Données utilisées uniquement pour te contacter.</p>
+        </div>
+        <div class="cta__visual">
+          <div class="cta__emoji-grid">
+            <span>🥕</span><span>🧅</span><span>🍅</span>
+            <span>🥑</span><span>🍳</span><span>🥦</span>
+            <span>🌽</span><span>🧄</span><span>🥗</span>
+          </div>
+          <div class="cta__quote">
+            <em>"Cuisiner ensemble, c'est créer des liens."</em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="logo-icon">🍳</span>
+          <strong>Les P'tites Cuisines de Montréal</strong>
+          <p>OBNL — Cuisine collective mobile pour étudiants</p>
+        </div>
+        <div class="footer__links">
+          <a href="#comment">Comment ça marche</a>
+          <a href="#valeur">Pourquoi nous</a>
+          <a href="#tarifs">Tarifs</a>
+          <a href="#rejoindre">Rejoindre</a>
+        </div>
+        <div class="footer__social">
+          <p>Suivez-nous</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="TikTok">🎵</a>
+            <a href="#" aria-label="Facebook">📘</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Les P'tites Cuisines de Montréal — OBNL à mission sociale</p>
+        <p class="footer__team">Réalisé par l'Équipe 3 — ENT-1000, Université Laval</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon compte — Les P'tites Cuisines de Montréal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="account.css" />
+</head>
+<body class="account-body">
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="logo-icon">🍳</span>
+        <span>Les P'tites Cuisines</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html#comment">Comment ça marche</a></li>
+        <li><a href="index.html#tarifs">Tarifs</a></li>
+        <li><a href="index.html#rejoindre">Rejoindre</a></li>
+        <li id="navAuthLink"><a href="#" class="btn btn--nav" id="navLoginBtn">Se connecter</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <main class="account-main">
+
+    <section class="auth-section" id="authSection">
+      <div class="auth-card">
+        <div class="auth-card__logo">🍳</div>
+        <h1>Bienvenue !</h1>
+        <p class="auth-card__sub">Connecte-toi ou crée ton compte pour accéder à ton espace et t'inscrire aux sessions.</p>
+
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login">Se connecter</button>
+          <button class="auth-tab" data-tab="register">Créer un compte</button>
+        </div>
+
+        <form id="loginForm" class="auth-form" onsubmit="handleLogin(event)">
+          <div class="auth-form__field">
+            <label>Courriel</label>
+            <input type="email" name="email" placeholder="ton@courriel.com" required />
+          </div>
+          <div class="auth-form__field">
+            <label>Mot de passe</label>
+            <input type="password" name="password" placeholder="••••••••" required />
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Se connecter</button>
+          <p id="loginError" class="auth-form__error"></p>
+        </form>
+
+        <form id="registerForm" class="auth-form auth-form--hidden" onsubmit="handleRegister(event)">
+          <div class="auth-form__field">
+            <label>Prénom</label>
+            <input type="text" name="first_name" placeholder="Ton prénom" required />
+          </div>
+          <div class="auth-form__field">
+            <label>Courriel</label>
+            <input type="email" name="email" placeholder="ton@courriel.com" required />
+          </div>
+          <div class="auth-form__field">
+            <label>Mot de passe <span class="hint">(8 caractères min.)</span></label>
+            <input type="password" name="password" placeholder="••••••••" minlength="8" required />
+          </div>
+          <div class="auth-form__field">
+            <label>Université / Cégep</label>
+            <select name="university">
+              <option value="">— Choisir —</option>
+              <option>Université de Montréal</option>
+              <option>UQAM</option>
+              <option>McGill</option>
+              <option>Concordia</option>
+              <option>Université Laval</option>
+              <option>Collège de Maisonneuve</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Créer mon compte</button>
+          <p id="registerError" class="auth-form__error"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="dashboard" id="dashboard" style="display:none;">
+      <div class="container">
+
+        <div class="dashboard__header">
+          <div class="dashboard__avatar" id="dashAvatar"></div>
+          <div class="dashboard__info">
+            <h1 id="dashName">Chargement…</h1>
+            <p id="dashUniversity"></p>
+            <span id="dashBadge" class="dashboard__badge"></span>
+          </div>
+          <button class="btn btn--ghost" onclick="handleLogout()">Se déconnecter</button>
+        </div>
+
+        <div class="dashboard__grid">
+
+          <div class="dashboard__col">
+            <div class="dashboard__card">
+              <div class="dashboard__card-header">
+                <h2>📅 Prochaines sessions</h2>
+                <div class="calendar-nav">
+                  <button onclick="prevMonth()" aria-label="Mois précédent">&#8249;</button>
+                  <span id="calendarTitle"></span>
+                  <button onclick="nextMonth()" aria-label="Mois suivant">&#8250;</button>
+                </div>
+              </div>
+
+              <div class="calendar" id="calendar">
+                <div class="calendar__weekdays">
+                  <span>Lun</span><span>Mar</span><span>Mer</span>
+                  <span>Jeu</span><span>Ven</span><span>Sam</span><span>Dim</span>
+                </div>
+                <div class="calendar__days" id="calendarDays"></div>
+              </div>
+            </div>
+
+            <div class="dashboard__card">
+              <h2>✅ Mes inscriptions</h2>
+              <div id="myEvents" class="events-list">
+                <p class="events-list__empty">Chargement…</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard__col">
+            <div class="dashboard__card">
+              <h2>🍳 Toutes les sessions à venir</h2>
+              <div id="allEvents" class="events-list">
+                <p class="events-list__empty">Chargement des sessions…</p>
+              </div>
+            </div>
+
+            <div class="dashboard__card admin-card" id="adminCard" style="display:none;">
+              <h2>⚙️ Créer une session <span class="badge badge--admin">Admin</span></h2>
+              <form class="event-form" id="eventForm" onsubmit="handleCreateEvent(event)">
+                <div class="auth-form__field">
+                  <label>Titre</label>
+                  <input type="text" name="title" placeholder="Session de cuisine — Thème..." required />
+                </div>
+                <div class="auth-form__field">
+                  <label>Description</label>
+                  <textarea name="description" placeholder="Menu, infos pratiques…" rows="3"></textarea>
+                </div>
+                <div class="auth-form__field">
+                  <label>Lieu</label>
+                  <input type="text" name="location" placeholder="Cuisine communautaire UdeM…" />
+                </div>
+                <div class="event-form__row">
+                  <div class="auth-form__field">
+                    <label>Début</label>
+                    <input type="datetime-local" name="starts_at" required />
+                  </div>
+                  <div class="auth-form__field">
+                    <label>Fin</label>
+                    <input type="datetime-local" name="ends_at" required />
+                  </div>
+                </div>
+                <div class="auth-form__field">
+                  <label>Nombre de places</label>
+                  <input type="number" name="capacity" value="20" min="1" max="100" required />
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Créer la session</button>
+                <p id="eventError" class="auth-form__error"></p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <script src="account.js"></script>
+</body>
+</html>
