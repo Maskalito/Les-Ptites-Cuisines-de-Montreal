@@ -4,6 +4,7 @@ Service d'abonnement de cuisine collective mobile pour étudiants — OBNL à mi
 
 > Projet réalisé dans le cadre du cours ENT-1000 Savoir Entreprendre, Université Laval.  
 > Équipe 3 : Marion Kauffmann, Antonin Leprest, Eliot Tisserand, Gabrielle Bigard, Clément Barrier, Léandre Cacarié.
+> Ce projet constitue la landing page du projet principal, développée par Clément Barrier.
 
 ---
 
